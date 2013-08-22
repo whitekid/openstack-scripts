@@ -40,7 +40,7 @@ function network_check(){
 
 	ifconfig $data_if.$data_vlan $data_ip up
 
-	ping -c 3 $gw_ip
+	ping -c 3 -I $data_if.$data_vlan $gw_ip
 }
 
 function cleanup() {
