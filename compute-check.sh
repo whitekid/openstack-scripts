@@ -25,6 +25,7 @@ function ensure_command(){
 
 function kvm_check(){
 	ensure_command kvm-ok cpu-checker
+	kvm-ok
 }
 
 function network_check(){
