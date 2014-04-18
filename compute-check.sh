@@ -33,7 +33,8 @@ function network_check(){
 
 	ensure_command vconfig vlan
 	modprobe 8021q
-	
+
+	ifconfig $data_if up
 	if ! ifconfig $data_if.$data_vlan > /dev/null; then
 		vconfig add $data_if $data_vlan
 		ifconfig $data_if.$data_vlan > /dev/null
